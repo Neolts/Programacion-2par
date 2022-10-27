@@ -1,0 +1,194 @@
+### 2 Parcial Programacion Funcional ###
+Notas 1
+Diagramas de clase(UML:Unified Modelling Language)
+Elementos: Nombre de la clase(representa la instancia de un objeto)
+            Cada objeto tiene caracteristicas o propiedades que lo hacen ser lo que es
+            Acciones/Metodos: La funcion que realiza el objeto
+            
+El software contiene sistema operativo y apps. El usuario utiliza las apps para comunicarse con el sorfware
+y el software se comunica con el hardware.
+
+Notas 2
+## Herencia ##
+Clase padre que hereda sus caracteristicas, extiende metodos de clase.
+
+Programacion clase
+void main()  {
+    num a = 3;
+    print(a.isEven);
+
+
+    var infint= 5
+    var infdouble= 9.81;
+    print("${infint.runtimeType}");
+    print("${infdouble.runtimeType}");
+
+    num infnum;
+    infnum= 3.6;
+    print("${infnum.runtimeType}");
+    intnum= 5;
+    print("${infnum.runtimeType}");
+
+    print(5.isEven);
+}
+
+void main(List<string> args){
+  int a = -3000;
+  double b =9.5;
+
+  print(a.isNegative);
+  
+  print(b.floor());
+  print(b.cell());
+
+  print(b.round());
+  
+  print(b.truncate());
+
+  var c = "Hola"
+  
+  print(b.isNaN);
+
+}
+
+
+import 'dart:math';
+
+main() {
+
+  division
+  print(10/3) trumcate();
+  print(10~/3);
+
+  print(cos(45* pi / 100));
+  print(sin(45* pi / 100));
+  print(sqrt(9));
+  print(pow(2, 3));
+  print(max(6, 10));
+  print(min(6, 10));
+}
+
+void main(List<String> args) {
+  Incrementos y decrementos
+
+  var contador= 0;
+
+  contador= contador + 1;
+  print(contador);
+  contador+= 1;
+  print(contador);
+  contador++;
+  print(contador);
+  ++contador;
+print(contador);
+
+  var c= 10;
+print(++c); //11
+  c=10;
+  print(++c); //11
+  print(c);
+
+}
+
+void main(List<String> args) {
+  int a= 5;
+  double b= 3.5;
+
+  print(a.toDouble());
+  print(b.toInt());
+  print("El valor es: $a");
+  print("El valor es: "+ a.toSting());
+  print(a+b);
+  print(a/b);
+
+}
+
+
+void main(List<String> args) {
+ var a = "10";
+ var b = "8.5";
+
+  print(int.parse(a)*2);
+  print(double.parse(b)*2);
+  var numero= 3.132557489563;
+
+  //print(numero.toStringAsFixed(2));
+
+}
+
+void main() {
+  User usario = User();
+  print(usario);
+  usario._nombre= "Alex";
+  usario._edad= 18;
+  print(usario._nombre);
+  print(usario._edad);
+
+  //Usuario 2
+  User usuario2 = User();
+  usuario2._nombre= "Maria";
+  usuario2._edad= 25;
+  print(usuario2._nombre);
+  print(usuario2._edad);
+
+}
+//Clase que representa un usario
+class User{
+  //propiedad nombre de tipo string
+  String? _nombre;
+  //Propiedad edad de tipo int mayor a 0
+  int? _edad;
+
+//Metodo de imprimir un usuario
+  void reportUser(){
+    print(_nombre);
+    print(_edad);
+
+//getter: Es el metodo que obtiene el valor de una propiedad
+//cetter:: establece el valor de una propiedad
+
+  }
+  
+void set nombre(String nombre)=> _nombre = nombre;
+
+void set edad(int edad) => _edad=edad;
+}
+
+/*void set edad(int edad)=> _edad = edad;
+
+String get nombre {
+  return _nombre!;
+ }
+int? get edad => _edad;
+} 
+
+Sobreescritura de metodos (overriding)
+
+class User {
+  String nombre = "";
+  int edad = 0;
+  }
+
+  void mostrarDatos() {
+  print("Nombre: $nombre");
+  print("Edad: $edad");
+  }
+}
+
+class Estudiante extends User {
+@override
+void mostrarDatos(){
+  print("Estudiante: $nombre");
+  print("Edad: $edad");
+  }
+}
+
+class Profesor extends User {}
+
+class Directivo extends User {}
+
+void main(List<string>args) {
+   final estudiante1= Estudiante();
+   estudiante1.nombre = "Hugo";
+   estudiante1.edad = 15;
+   estidiante1.mostrarDatos();
